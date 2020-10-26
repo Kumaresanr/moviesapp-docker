@@ -1,6 +1,5 @@
-
 {
   "images": {
-    "openjdk": "8"
+    "openjdk": "8-jdk-alpine"
   }
 }
