@@ -1,0 +1,10 @@
+---
+applications:
+- name: moviesapp
+  memory: 1G
+  instances: 1
+  host: moviesapp
+  disk_quota: 1G
+  docker:
+    image: registry-secured-dev.apps.dev.cloudsprint.io/moviesapp
+    username: fegod

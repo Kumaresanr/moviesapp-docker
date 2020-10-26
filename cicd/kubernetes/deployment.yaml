@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: moviesapp-deployment
+  labels:
+    app: moviesapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: moviesapp
+  template:
+    metadata:
+      labels:
+        app: moviesapp
+    spec:
+      containers:
+        - name: moviesapp
+          image: registry.hub.docker.com/kumaresandocker/moviesapp:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: moviesapp-config
